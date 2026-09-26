@@ -4,14 +4,11 @@ from langgraph.constants import START, END, add_messages
 from langgraph.graph import StateGraph
 
 from llm.llm import get_llm
-from tools.attendence import get_attendance
+from app.tools.attendence import get_attendance
 from app.tools.leave_balance import get_leave_balance
-from pydantic import BaseModel
 from langgraph.prebuilt import ToolNode, tools_condition
+from app.graph.state import AgentState
 
-
-class AgentState(TypedDict):
-    messages: Annotated[list, add_messages]
 
 def build_hr_agent():
     llm = get_llm()

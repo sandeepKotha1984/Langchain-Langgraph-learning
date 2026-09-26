@@ -1,14 +1,10 @@
-from typing import TypedDict, Annotated
-from urllib import response
-
-from langchain_ollama import ChatOllama
 from langgraph.constants import START, END
 from langgraph.graph import StateGraph
 from langgraph.prebuilt import ToolNode, tools_condition
-from langgraph.graph.message import add_messages
 
-from llm.llm import get_llm
-from tools.employee import get_employee_details
+from app.graph.state import AgentState
+from app.llm.llm import get_llm
+from app.tools.employee import get_employee_details
 
 def build_employee_agent():
 
@@ -17,8 +13,6 @@ def build_employee_agent():
         get_employee_details
     ]
     tools_llm = llm.bind_tools(tools)
-    class AgentState(TypedDict):
-        messages:Annotated[list,add_messages]
 
     def llm_node(state):
         user_messages = state["messages"][-1].content

@@ -9,7 +9,7 @@ from rag.search.similarity_search import search
 from rag.vector_store.qDrant import insert_embeddings, create_collection
 
 
-def main():
+def rag_initialization():
     # Example usage of the load_document function
     file_path = "enterprise_rag_mixed_structure_policy.docx"  # Replace with your actual file path
     document_content = load_document(file_path)
