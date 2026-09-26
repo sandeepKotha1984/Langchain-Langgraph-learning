@@ -1,0 +1,39 @@
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-ollama
+langchain-qdrant
+
+# LangGraph
+langgraph
+
+# Qdrant
+qdrant-client
+
+# Embeddings
+sentence-transformers
+langchain-huggingface
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# API
+fastapi
+uvicorn[standard]
+
+# Configuration
+python-dotenv
+
+# Data validation
+pydantic
+pydantic-settings
+
+# HTTP
+httpx
+
+# Testing
+pytest
+langchain-text-splitters
+langsmith
